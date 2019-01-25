@@ -8,6 +8,30 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="The Predator is the reboot of the 1987 Predator Franchise. The Story follows a fugitive predator bringing a gift from the Yauta Prime for the humans to prevent the predator invasion of the earth and the Upgrade predator hunting the fugitive and the humans caught in between "
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
     <ImageView
         android:id="@+id/ivRating"
         android:layout_width="0dp"
