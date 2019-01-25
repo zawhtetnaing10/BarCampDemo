@@ -8,6 +8,111 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <ImageView
+        android:id="@+id/ivRating"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/ivAge"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/ic_rating_red" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="242 Ratings"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivRating"
+        app:layout_constraintStart_toStartOf="@+id/ivRating"
+        app:layout_constraintTop_toBottomOf="@+id/ivRating" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Family"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvRating"
+        app:layout_constraintEnd_toEndOf="@+id/ivAge"
+        app:layout_constraintStart_toStartOf="@+id/ivAge" />
+
+    <ImageView
+        android:id="@+id/ivAge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/ivTomato"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivRating"
+        app:layout_constraintTop_toTopOf="@+id/ivRating"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/circle_icon_red" />
+
+    <ImageView
+        android:id="@+id/ivTomato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/ivSimilar"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivAge"
+        app:layout_constraintTop_toTopOf="@+id/ivAge"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/tomato_icon" />
+
+    <TextView
+        android:id="@+id/tvTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="71%"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvAge"
+        app:layout_constraintEnd_toEndOf="@+id/ivTomato"
+        app:layout_constraintStart_toStartOf="@+id/ivTomato" />
+
+    <TextView
+        android:id="@+id/tvSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Similar"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivSimilar"
+        app:layout_constraintStart_toStartOf="@+id/ivSimilar"
+        app:layout_constraintTop_toBottomOf="@+id/ivSimilar" />
+
+    <ImageView
+        android:id="@+id/ivSimilar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivTomato"
+        app:layout_constraintTop_toTopOf="@+id/ivTomato"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        app:srcCompat="@drawable/similar_icon" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
