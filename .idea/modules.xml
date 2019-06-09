@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BarCampDemo.iml" filepath="$PROJECT_DIR$/BarCampDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConstraintLayoutDemo.iml" filepath="$PROJECT_DIR$/ConstraintLayoutDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
