@@ -14,15 +14,38 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "constraint-layout-flavor-dimension"
+
+    productFlavors {
+
+        def APP_LABEL = "launcher_name"
+        def LABEL_DEV = "(Dev)Constraint Layout Demo"
+        def LABEL_RELEASE = "Constraint Layout Demo"
+
+
+        dev {
+            applicationId = "com.zawhtetnaing.barcampdemo.dev"
+            resValue "string", APP_LABEL, LABEL_DEV
+        }
+
+        prod {
+            applicationId = "com.zawhtetnaing.barcampdemo"
+            resValue "string", APP_LABEL, LABEL_RELEASE
         }
     }
 }
 
 dependencies {
+    implementation project(':shared')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-beta01'

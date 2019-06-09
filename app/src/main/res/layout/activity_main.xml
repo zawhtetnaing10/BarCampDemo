@@ -1,12 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".activities.MainActivity">
 
 
-    <include layout="@layout/content_main" />
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		tools:context=".activities.MainActivity"
+		>
+
+		<View
+			android:id="@+id/divider2"
+			android:layout_width="0dp"
+			android:layout_height="1dp"
+			android:layout_marginTop="16dp"
+			android:background="@android:color/darker_gray"
+			app:layout_constraintEnd_toEndOf="@+id/button2"
+			app:layout_constraintStart_toStartOf="@+id/button"
+			app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+
+		<TextView
+			android:id="@+id/tvDescription"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginTop="16dp"
+			android:layout_marginBottom="8dp"
+			android:text="The Predator is the reboot of the 1987 Predator Franchise. The Story follows a fugitive predator bringing a gift from the Yauta Prime for the humans to prevent the predator invasion of the earth and the Upgrade predator hunting the fugitive and the humans caught in between "
+			android:textColor="@android:color/black"
+			android:textSize="14sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="@+id/divider2"
+			app:layout_constraintStart_toStartOf="@+id/divider2"
+			app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+		<ImageView
+			android:id="@+id/ivRating"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="16dp"
+			android:scaleType="centerCrop"
+			app:layout_constraintEnd_toStartOf="@+id/ivAge"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.08"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/view"
+			app:layout_constraintWidth_default="percent"
+			app:layout_constraintWidth_percent="0.15"
+			app:srcCompat="@drawable/ic_rating_red" />
+
+		<TextView
+			android:id="@+id/tvRating"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="242 Ratings"
+			android:textSize="14sp"
+			app:layout_constraintEnd_toEndOf="@+id/ivRating"
+			app:layout_constraintStart_toStartOf="@+id/ivRating"
+			app:layout_constraintTop_toBottomOf="@+id/ivRating" />
+
+		<TextView
+			android:id="@+id/tvAge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Family"
+			android:textSize="14sp"
+			app:layout_constraintBaseline_toBaselineOf="@+id/tvRating"
+			app:layout_constraintEnd_toEndOf="@+id/ivAge"
+			app:layout_constraintStart_toStartOf="@+id/ivAge" />
+
+		<ImageView
+			android:id="@+id/ivAge"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:scaleType="fitXY"
+			app:layout_constraintEnd_toStartOf="@+id/ivTomato"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.08"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/ivRating"
+			app:layout_constraintTop_toTopOf="@+id/ivRating"
+			app:layout_constraintWidth_default="percent"
+			app:layout_constraintWidth_percent="0.15"
+			app:srcCompat="@drawable/circle_icon_red" />
+
+		<ImageView
+			android:id="@+id/ivTomato"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:scaleType="fitXY"
+			app:layout_constraintEnd_toStartOf="@+id/ivSimilar"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.08"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/ivAge"
+			app:layout_constraintTop_toTopOf="@+id/ivAge"
+			app:layout_constraintWidth_default="percent"
+			app:layout_constraintWidth_percent="0.15"
+			app:srcCompat="@drawable/tomato_icon" />
+
+		<TextView
+			android:id="@+id/tvTomato"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="71%"
+			android:textSize="14sp"
+			app:layout_constraintBaseline_toBaselineOf="@+id/tvAge"
+			app:layout_constraintEnd_toEndOf="@+id/ivTomato"
+			app:layout_constraintStart_toStartOf="@+id/ivTomato" />
+
+		<TextView
+			android:id="@+id/tvSimilar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="Similar"
+			android:textSize="14sp"
+			app:layout_constraintEnd_toEndOf="@+id/ivSimilar"
+			app:layout_constraintStart_toStartOf="@+id/ivSimilar"
+			app:layout_constraintTop_toBottomOf="@+id/ivSimilar" />
+
+		<ImageView
+			android:id="@+id/ivSimilar"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginEnd="8dp"
+			android:scaleType="fitXY"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.08"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintStart_toEndOf="@+id/ivTomato"
+			app:layout_constraintTop_toTopOf="@+id/ivTomato"
+			app:layout_constraintWidth_default="percent"
+			app:layout_constraintWidth_percent="0.15"
+			app:srcCompat="@drawable/similar_icon" />
+
+		<Button
+			android:id="@+id/button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="16dp"
+			android:layout_marginEnd="8dp"
+			android:background="@android:color/holo_red_dark"
+			android:text="Rent From R127"
+			android:textColor="@android:color/white"
+			app:layout_constraintEnd_toStartOf="@+id/button2"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintHorizontal_weight="1"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="24dp"
+			android:background="@android:color/holo_red_dark"
+			android:text="Buy From R227"
+			android:textColor="@android:color/white"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.5"
+			app:layout_constraintHorizontal_weight="1"
+			app:layout_constraintStart_toEndOf="@+id/button"
+			app:layout_constraintTop_toTopOf="@+id/button" />
+
+		<TextView
+			android:id="@+id/textView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="24dp"
+			android:text="The Predator"
+			android:textColor="@android:color/black"
+			android:textSize="24sp"
+			android:textStyle="bold"
+			app:layout_constraintStart_toEndOf="@+id/imageView2"
+			app:layout_constraintTop_toBottomOf="@+id/ivBackground" />
+
+		<TextView
+			android:id="@+id/textView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="April 2018 R 120 minutes"
+			android:textSize="14sp"
+			app:layout_constraintStart_toStartOf="@+id/textView"
+			app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+		<ImageView
+			android:id="@+id/ivIcon"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginStart="24dp"
+			android:layout_marginEnd="24dp"
+			android:scaleType="fitXY"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.1"
+			app:layout_constraintStart_toEndOf="@+id/textView"
+			app:layout_constraintTop_toTopOf="@+id/textView"
+			app:layout_constraintWidth_default="percent"
+			app:layout_constraintWidth_percent="0.20"
+			app:srcCompat="@drawable/ic_bookmark" />
+
+		<ImageView
+			android:id="@+id/ivBackground"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:scaleType="centerCrop"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.3"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/predator_background" />
+
+		<ImageView
+			android:id="@+id/imageView2"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="8dp"
+			android:scaleType="centerCrop"
+			app:layout_constraintBottom_toBottomOf="@+id/ivBackground"
+			app:layout_constraintHeight_default="percent"
+			app:layout_constraintHeight_percent="0.20"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/ivBackground"
+			app:layout_constraintWidth_default="percent"
+			app:layout_constraintWidth_percent="0.25"
+			app:srcCompat="@drawable/predator_poster_2" />
+
+		<View
+			android:id="@+id/view"
+			android:layout_width="0dp"
+			android:layout_height="1dp"
+			android:layout_marginTop="16dp"
+			android:background="@android:color/darker_gray"
+			app:layout_constraintEnd_toEndOf="@+id/button2"
+			app:layout_constraintStart_toStartOf="@+id/button"
+			app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
